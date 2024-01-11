@@ -50,13 +50,19 @@ __CTRL+w: DBP__ DBPassword=password
 -sudo systemctl enable zabbix-server zabbix-agent apache2
 ```
 Процесс установки Zabbix Server
+
 ![alt text](https://github.com/Anudora41/sys-pattern-homework/blob/main/баш.png)
 ![alt text](https://github.com/Anudora41/sys-pattern-homework/blob/main/установка.png)
+
 Состояние сервера
+
 ![alt text](https://github.com/Anudora41/sys-pattern-homework/blob/main/сервер.png)
+
 В самом Zabbix
+
 ![alt text](https://github.com/Anudora41/sys-pattern-homework/blob/main/вход.png)
 ![alt text](https://github.com/Anudora41/sys-pattern-homework/blob/main/как%20выглядид%20ссылка.jpg)
+
 ---
 
 ### Задание 2
