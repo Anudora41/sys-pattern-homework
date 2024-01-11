@@ -24,8 +24,8 @@
 
 ### Задание 1
 
-####Установите Zabbix Server с веб-интерфейсом.
-####Процесс выполнения
+#### Установите Zabbix Server с веб-интерфейсом.
+#### Процесс выполнения
 1. Выполняя ДЗ, сверяйтесь с процессом отражённым в записи лекции.
 2. Установите Zabbix Agent на 2 вирт.машины, одной из них может быть ваш Zabbix Server.
 3. Добавьте Zabbix Server в список разрешенных серверов ваших Zabbix Agentов.
@@ -37,10 +37,10 @@
 
 ```
 -sudo apt update...
--wget https://repo.zabbix.com/zabbix/6.4/ubuntu/pool/main/z/zabbix-release/zabbix-release_6.4-1+ubuntu22.04_all.deb....
--dpkg -i zabbix-release_6.4-1+ubuntu22.04_all.deb....
--apt update ....
--apt install zabbix-server-pgsql zabbix-frontend-php php8.1-pgsql zabbix-apache-conf zabbix-sql-scripts zabbix-agent....
+-wget https://repo.zabbix.com/zabbix/6.4/ubuntu/pool/main/z/zabbix-release/zabbix-release_6.4-1+ubuntu22.04_all.deb
+-dpkg -i zabbix-release_6.4-1+ubuntu22.04_all.deb
+-apt update 
+-apt install zabbix-server-pgsql zabbix-frontend-php php8.1-pgsql zabbix-apache-conf zabbix-sql-scripts zabbix-agent
 -sudo -u postgres createuser --pwprompt zabbix
 -sudo -u postgres createdb -O zabbix zabbix
 -zcat /usr/share/zabbix-sql-scripts/postgresql/server.sql.gz | sudo -u zabbix psql zabbix
@@ -49,17 +49,20 @@ __CTRL+w: DBP__ DBPassword=password
 -sudo systemctl restart zabbix-server zabbix-agent apache2
 -sudo systemctl enable zabbix-server zabbix-agent apache2
 ```
-
-`При необходимости прикрепитe сюда скриншоты
-![Название скриншота 1](ссылка на скриншот 1)`
-
-
+Процесс установки Zabbix Server
+![alt text](https://github.com/Anudora41/sys-pattern-homework/blob/main/баш.png)
+![alt text](https://github.com/Anudora41/sys-pattern-homework/blob/main/установка.png)
+Состояние сервера
+![alt text](https://github.com/Anudora41/sys-pattern-homework/blob/main/сервер.png)
+В самом Zabbix
+![alt text](https://github.com/Anudora41/sys-pattern-homework/blob/main/вход.png)
+![alt text](https://github.com/Anudora41/sys-pattern-homework/blob/main/как%20выглядид%20ссылка.jpg)
 ---
 
 ### Задание 2
 
-####Установите Zabbix Server с веб-интерфейсом.
-####Процесс выполнения
+#### Установите Zabbix Server с веб-интерфейсом.
+#### Процесс выполнения
 1. Выполняя ДЗ, сверяйтесь с процессом отражённым в записи лекции.
 2. Установите Zabbix Agent на 2 вирт.машины, одной из них может быть ваш Zabbix Server.
 3. Добавьте Zabbix Server в список разрешенных серверов ваших Zabbix Agentов.
@@ -68,23 +71,23 @@ __CTRL+w: DBP__ DBPassword=password
 Требования к результатам
    
 1.Приложите в файл README.md скриншот раздела Configuration > Hosts, где видно, что агенты подключены к серверу
+![alt text](https://github.com/Anudora41/sys-pattern-homework/blob/main/хосты.png)
 2.Приложите в файл README.md скриншот лога zabbix agent, где видно, что он работает с сервером
+![alt text](https://github.com/Anudora41/sys-pattern-homework/blob/main/агент%20работает.png)
 3.Приложите в файл README.md скриншот раздела Monitoring > Latest data для обоих хостов, где видны поступающие от агентов данные.
+![alt text](https://github.com/Anudora41/sys-pattern-homework/blob/main/мониторинг.png)
 4.Приложите в файл README.md текст использованных команд в GitHub
 ```
--sudo apt update...
--wget https://repo.zabbix.com/zabbix/6.4/ubuntu/pool/main/z/zabbix-release/zabbix-release_6.4-1+ubuntu22.04_all.deb....
--dpkg -i zabbix-release_6.4-1+ubuntu22.04_all.deb....
--apt update....
-apt install zabbix-agent....
-systemctl restart zabbix-agent
-systemctl enable zabbix-agent
-sudo nano /etc/zabbix/zabbix_agentd.conf
-systemctl restart zabbix-agent
+-sudo apt update
+-wget https://repo.zabbix.com/zabbix/6.4/ubuntu/pool/main/z/zabbix-release/zabbix-release_6.4-1+ubuntu22.04_all.deb
+-dpkg -i zabbix-release_6.4-1+ubuntu22.04_all.deb
+-apt update
+-apt install zabbix-agent
+-systemctl restart zabbix-agent
+-systemctl enable zabbix-agent
+-sudo nano /etc/zabbix/zabbix_agentd.conf
+-systemctl restart zabbix-agent
 ```
-
-`При необходимости прикрепитe сюда скриншоты
-![Название скриншота 2](ссылка на скриншот 2)`
 
 
 ---
